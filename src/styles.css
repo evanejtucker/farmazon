@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+#main-nav {
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #F87217;
+	font-family: 'Acme', sans-serif;
+}
