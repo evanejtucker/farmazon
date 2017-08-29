@@ -12,7 +12,7 @@ import { UserService } from './user.service';
 
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
-import { AuthguardGuard } from "./authguard.guard";
+import { AuthguardGuard } from './authguard.guard';
 
 import { NgFor } from '@angular/common';
 

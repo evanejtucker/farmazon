@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NgFor } from '@angular/common';
+import {Router} from '@angular/router';
+import { AppComponent } from '../app.component';
 
 
 @Component({
