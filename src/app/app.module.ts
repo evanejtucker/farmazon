@@ -8,6 +8,12 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 
+
+import { AgmCoreModule } from '@agm/core';
+import { Geolocation } from '@ionic-native/geolocation';
+
+
+
 const appRoutes: Routes = [
   { 
     path: '', 
@@ -37,13 +43,16 @@ const appRoutes: Routes = [
     ProfileComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBb44GEujIrnkFexqREwJEXfrOvy5MYlJo'
+    }),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule
   ],
-  providers: [],
+  providers: [Geolocation],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
