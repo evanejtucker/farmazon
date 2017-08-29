@@ -2,3 +2,7 @@ agm-map {
   height: 300px;
   width: 75%;
 }
+
+agm-marker {
+	height: 10px;
+}

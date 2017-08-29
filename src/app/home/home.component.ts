@@ -15,54 +15,38 @@ location: any;
 lat: number;
 lng: number;
 
+//Dummy Data
 places = [{
 	lat: 40,
 	lng: -100
 },
 {
-	lat: 45,
+	lat: 35,
 	lng: -110
 }
 ];
-
+	today = new Date();
 
 constructor(private geolocation: Geolocation) {}
 
 
   ngOnInit() {
 
-	   
+	//on page load grab user's location if they allow browser to	      
 
-  this.geolocation.getCurrentPosition().then((location) => {
- // resp.coords.latitude
- // resp.coords.longitude
+  	this.geolocation.getCurrentPosition().then((location) => {
+
  	this.lat = location.coords.latitude;
  	this.lng = location.coords.longitude;
-
-
-
  	this.location = location;
- 	console.log("location grabbed");
+ 	//Logged 
+ 	console.log("location grabbed: " + location);
  
 }).catch((error) => {
   console.log('Error getting location', error);
 });
 
 
-
-let watch = this.geolocation.watchPosition();
-watch.subscribe((data) => {
- // data can be a set of coordinates, or an error (if an error occurred).
- // data.coords.latitude
- // data.coords.longitude
-});
-
-
-
-
-
   }
-
- 
 
 }
