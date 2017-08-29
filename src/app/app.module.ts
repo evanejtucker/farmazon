@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UserService } from './user.service';
 
 
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { AuthguardGuard } from "./authguard.guard";
 
 
 const appRoutes: Routes = [
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   },
   { 
     path: 'profile', 
+    canActivate: [AuthguardGuard],
     component: ProfileComponent, 
   },
 ];
@@ -52,7 +54,7 @@ const appRoutes: Routes = [
     ),
     BrowserModule
   ],
-  providers: [Geolocation],
+  providers: [Geolocation, UserService, AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
