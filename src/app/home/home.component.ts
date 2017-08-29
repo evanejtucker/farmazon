@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
+import { NgFor } from '@angular/common';
+
 
 @Component({
   selector: 'app-home',
@@ -13,13 +15,23 @@ location: any;
 lat: number;
 lng: number;
 
+places = [{
+	lat: 40,
+	lng: -100
+},
+{
+	lat: 45,
+	lng: -110
+}
+];
+
+
 constructor(private geolocation: Geolocation) {}
 
 
   ngOnInit() {
 
- 
-
+	   
 
   this.geolocation.getCurrentPosition().then((location) => {
  // resp.coords.latitude
