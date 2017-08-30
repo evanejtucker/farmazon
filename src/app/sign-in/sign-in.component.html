@@ -1,17 +1,3 @@
-<nav>
-    <div class="nav-wrapper" id="main-nav">
-      <a routerLink="/" routerLinkActive="active" class="brand-logo">{{title}}</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a routerLink="/sign-in" routerLinkActive="active">Sign-In</a></li>
-        <li><a routerLink="/sign-up" routerLinkActive="active">Sign-Up</a></li>
-        <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-      </ul>
-    </div>
-</nav>
-
-<router-outlet></router-outlet>
-
-
 <div class="container">
 	<form (submit)="loginUser($event)">
 		
