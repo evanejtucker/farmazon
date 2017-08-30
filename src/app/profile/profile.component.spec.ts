@@ -20,6 +20,8 @@ describe('ProfileComponent', () => {
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(ProfileComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

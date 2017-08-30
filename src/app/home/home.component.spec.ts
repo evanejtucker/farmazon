@@ -20,6 +20,8 @@ describe('HomeComponent', () => {
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(HomeComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });
