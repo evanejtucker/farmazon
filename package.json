@@ -28,8 +28,11 @@
     "cordova": "^7.0.1",
     "cordova-plugin-geolocation": "^2.4.3",
     "core-js": "^2.4.1",
+    "mysql": "^2.14.1",
+    "mysql2": "^1.4.2",
     "plugin": "^0.3.3",
     "rxjs": "^5.4.2",
+    "sequelize": "^4.7.5",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
