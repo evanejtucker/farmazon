@@ -20,6 +20,8 @@ describe('SearchBarComponent', () => {
   });
 
   it('should be created', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(SearchBarComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

@@ -1,6 +1,10 @@
 <div class="container">
-	<h4> {{ today | date}} </h4>
-</div>
+	
+	<div class="col s6 offset-s3" id="search-bar">
+		<h4> {{ today | date}} </h4>
+		<app-search-bar></app-search-bar>
+	</div>
+
 
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
@@ -10,5 +14,5 @@
 
 </agm-map>
 
-<app-search-bar></app-search-bar>
+</div>
 
