@@ -1,4 +1,11 @@
-
 <div class="container">
-	<h4>This is from the Home component</h4>
+	<h4> {{ today | date}} </h4>
 </div>
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker [iconUrl]="'https://d30y9cdsu7xlg0.cloudfront.net/png/24545-200.png'" *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
+          </agm-marker>
+
+
+</agm-map>

@@ -7,6 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UserService } from './user.service';
+
+
+import { AgmCoreModule } from '@agm/core';
+import { Geolocation } from '@ionic-native/geolocation';
+import { AuthguardGuard } from './authguard.guard';
+
+import { NgFor } from '@angular/common';
+
+
 
 const appRoutes: Routes = [
   { 
@@ -24,6 +34,7 @@ const appRoutes: Routes = [
   },
   { 
     path: 'profile', 
+    canActivate: [AuthguardGuard],
     component: ProfileComponent, 
   },
 ];
@@ -37,13 +48,16 @@ const appRoutes: Routes = [
     ProfileComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBb44GEujIrnkFexqREwJEXfrOvy5MYlJo'
+    }),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule
   ],
-  providers: [],
+  providers: [Geolocation, UserService, AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
