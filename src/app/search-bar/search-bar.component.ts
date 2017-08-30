@@ -20,6 +20,8 @@ export class SearchBarComponent implements OnInit {
   veggie:string
 
   vegtables:any = [];
+  
+  categories:any = ["vegtables", "fruits"];
 
    clickSearch(event, category) {
      event.preventDefault();

@@ -6,3 +6,8 @@ agm-map {
 agm-marker {
 	height: 10px;
 }
+
+#search-bar {
+	text-align: center;
+	margin-bottom: 40px;
+}
