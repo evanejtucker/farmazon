@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +17,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AuthguardGuard } from './authguard.guard';
 
 import { NgFor } from '@angular/common';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 
@@ -45,7 +48,8 @@ const appRoutes: Routes = [
     HomeComponent,
     SignInComponent,
     SignUpComponent,
-    ProfileComponent
+    ProfileComponent,
+    SearchBarComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -55,7 +59,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [Geolocation, UserService, AuthguardGuard],
   bootstrap: [AppComponent]
