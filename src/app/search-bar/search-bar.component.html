@@ -4,13 +4,13 @@
   <hr>
 
   <h6>Select your category</h6>
-  <select (change)="onChange($event.target.value)" class="browser-default center" #selected>
+  <select (change)="onChange($event.target.value)" class="browser-default center select" #selected>
     <option value="" disabled selected>Choose your option</option>
     <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
   </select>
   
   <h6 class="select-title">browse selection</h6>
-  <select (change)="onChange($event.target.value)" class="browser-default center" #selected>
+  <select (change)="onChange($event.target.value)" class="browser-default center select" #selected>
     <option value="" disabled selected>Choose your option</option>
     <option *ngFor="let veggie of vegtables" [value]="veggie.name">{{veggie.name}}</option>
   </select>
