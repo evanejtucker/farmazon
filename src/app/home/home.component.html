@@ -7,7 +7,7 @@
 	</div>
 
 
-<agm-map [latitude]="lat" [longitude]="lng">
+<agm-map class="map" [latitude]="lat" [longitude]="lng">
 
   <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng"[label]="farmer">
 		  
