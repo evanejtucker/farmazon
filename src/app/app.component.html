@@ -2,7 +2,8 @@
     <div class="nav-wrapper" id="main-nav">
       <a routerLink="/" routerLinkActive="active" class="brand-logo">{{title}}</a>
       <span>{{randomJoke}}</span>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul 
+       class="right hide-on-med-and-down">
         <li [@myAnimation]='state' (click)= "animateMe()"><a routerLink="/sign-in" routerLinkActive="active">Sign-In</a></li>
         <li [@myAnimation]='state' (click)= "animateMe()"><a routerLink="/sign-up" routerLinkActive="active">Sign-Up</a></li>
         <li [@myAnimation]='state' (click)= "animateMe()"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>

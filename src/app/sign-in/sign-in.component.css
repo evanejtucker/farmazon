@@ -6,6 +6,7 @@ body {
     background-size: cover;  
     padding-bottom: 200px;
     color: white;
+    height: 1000px;
 }
 
 div+.input {

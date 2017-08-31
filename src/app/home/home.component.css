@@ -1,6 +1,6 @@
 agm-map {
   height: 200px;
-	width: 45%;
+	width: 50%;
 	margin-left: 10%;
 }
 
@@ -32,4 +32,5 @@ body {
 	background-image: url("../../assets/images/sky.jpg");
 	background-size: 100% 100%;
 	font-family: 'Acme', sans-serif;
+	height: 1000px;
 }
