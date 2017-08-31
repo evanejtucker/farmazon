@@ -14,7 +14,7 @@ module.exports = function(app) {
 	app.get("/api/grower/:id", function(req, res) {
 		db.Product.findAll({
 			where: {
-				grower_id: req.params.id
+				growerId: req.params.id
 			}
 		}).then(function(results) {
 			res.json(results);
