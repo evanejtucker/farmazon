@@ -21,6 +21,7 @@ img {
 #search-bar {
 	text-align: center;
 	margin-bottom: 40px;
+	color: white;
 }
 
 #date {
@@ -30,6 +31,5 @@ img {
 body {
 	background-image: url("../../assets/images/sky.jpg");
 	background-size: 100% 100%;
-	color: white;
 	font-family: 'Acme', sans-serif;
 }
