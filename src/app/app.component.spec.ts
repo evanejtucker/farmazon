@@ -24,9 +24,9 @@ describe('AppComponent', () => {
     expect(comp.title).toEqual('Farmazon');
   });
 
-  it('state defaults to: small', () => {
-    expect(comp.state).toEqual('small');
-  });
+  // it('state defaults to: small', () => {
+  //   expect(comp.state).toEqual('small');
+  // });
 
   // it('jokeBank defaults to: ['Why did the cabbage win the race?.....because it was ahead', 'What is a farmers favorite Bruce Springsteen song?...Born in the USDA ', 'Where do farmers send their kids?....Kinder-Garden', 'What do you call a Nebraskan farmer with a sheep under each arm?....A pimp', 'What's the best part of farming?....Getting down and dirty with my hoes', 'What do you get when you cross an elephant with a garden?.....Squash!', 'How did the chicken farmer get into the Guinness book of world records?...His record c--k']', () => {
   //   expect(comp.jokeBank).toEqual(['Why did the cabbage win the race?.....because it was ahead', 'What is a farmers favorite Bruce Springsteen song?...Born in the USDA ', 'Where do farmers send their kids?....Kinder-Garden', 'What do you call a Nebraskan farmer with a sheep under each arm?....A pimp', 'What's the best part of farming?....Getting down and dirty with my hoes', 'What do you get when you cross an elephant with a garden?.....Squash!', 'How did the chicken farmer get into the Guinness book of world records?...His record c--k']);
