@@ -1,31 +1,34 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 import { SignUpComponent } from './sign-up.component';
-import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SignUpComponent', () => {
-  let component: SignUpComponent;
+  let comp: SignUpComponent;
   let fixture: ComponentFixture<SignUpComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [ SignUpComponent ]
-    })
-    .compileComponents();
-  }));
-
   beforeEach(() => {
+    const routerStub = {
+      navigate: () => ({})
+    };
+    const userServiceStub = {
+      setUserLoggedIn: () => ({})
+    };
+    TestBed.configureTestingModule({
+      declarations: [ SignUpComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ],
+      providers: [
+        { provide: Router, useValue: routerStub },
+        { provide: UserService, useValue: userServiceStub }
+      ]
+    });
     fixture = TestBed.createComponent(SignUpComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    comp = fixture.componentInstance;
   });
 
-  it('should be created', () => {
-    const fixture = TestBed.createComponent(SignUpComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+  it('can load instance', () => {
+    expect(comp).toBeTruthy();
   });
+
 });
