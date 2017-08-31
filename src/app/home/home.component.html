@@ -1,7 +1,8 @@
+<body>
 <div class="container">
 	
 	<div class="col s6 offset-s3" id="search-bar">
-		<h4> {{ today | date}} </h4>
+		<h4 id="date"> {{ today | date}} </h4>
 		<app-search-bar></app-search-bar>
 	</div>
 
@@ -24,3 +25,4 @@
 
 <div class='agm-info-window-content'>      <ng-content></ng-content>
 </div>
+</body>
