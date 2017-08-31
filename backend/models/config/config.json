@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Arvada842!",
-    "database": "farmazon",
-    "host": "127.0.0.1",
+    "username": "eo8odk9c86yql9s6",
+    "password": "rf3fdhr2m8l1mt7y",
+    "database": "zdzlrqpmi4bvo7u5",
+    "host": "ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
