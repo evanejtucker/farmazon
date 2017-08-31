@@ -5,9 +5,7 @@ const http = require('http');
 const app = express();
 const mysql = require('mysql');
 const prod = require('./server/routes/productsRoutes.js')(app);
-
-//API file for interacting with MySQL
-//const api = require('./server/routes/api');
+const grow = require('./server/routes/growerRoutes.js')(app);
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
