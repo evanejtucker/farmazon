@@ -4,8 +4,8 @@ const path = require('path');
 const http = require('http');
 const app = express();
 const mysql = require('mysql');
-const prod = require('./server/routes/productsRoutes.js')(app);
-const grow = require('./server/routes/growerRoutes.js')(app);
+const prod = require('./backend/server/routes/productsRoutes.js')(app);
+const grow = require('./backend/server/routes/growerRoutes.js')(app);
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -16,10 +16,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static('public'));
 
 // API location
-app.use('/api', require('./server/routes/productsRoutes'));
+app.use('/api', require('./backend/server/routes/productsRoutes'));
 
 // Requiring our models for syncing
-const db = require('./models');
+const db = require('./backend/models');
 
 // Send all other requests to Angular app
 app.all('/', function(req, res, next) {
@@ -29,7 +29,7 @@ app.all('/', function(req, res, next) {
  });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../src/index.html'));
+    res.sendFile(path.join(__dirname, './src/index.html'));
 });
 
 // Set port
