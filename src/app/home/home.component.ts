@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, OnChanges, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NgFor } from '@angular/common';
 import {Router} from '@angular/router';
 import { AppComponent } from '../app.component';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @Component({
@@ -20,12 +21,16 @@ lng: number;
 
 //Dummy Data
 places = [{
-	lat: 40,
-	lng: -100
+	lat: 39.73602,
+	lng: -104.8839
 },
 {
-	lat: 35,
-	lng: -110
+	lat: 39.60402,
+	lng: -104.639
+},
+{
+	lat: 39.70402,
+	lng: -104.939
 }
 ];
 	today = new Date();
@@ -43,7 +48,7 @@ constructor(private geolocation: Geolocation) {}
  	this.lng = location.coords.longitude;
  	this.location = location;
  	//Logged 
- 	console.log("location grabbed: " + location);
+ 	console.log("location grabbed: " + this.lat + " " + this.lng);
  
 }).catch((error) => {
   console.log('Error getting location', error);
@@ -51,5 +56,9 @@ constructor(private geolocation: Geolocation) {}
 
 
   }
+	// open(): Promise<void> { return this._infoWindowManager.open(this); }
+	// close(): Promise<void> {
+  //   return this._infoWindowManager.close(this).then(() => { this.infoWindowClose.emit(); });
+  // }
 
 }

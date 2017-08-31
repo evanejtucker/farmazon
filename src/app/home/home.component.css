@@ -1,10 +1,17 @@
 agm-map {
-  height: 300px;
-  width: 75%;
+  height: 200px;
+	width: 45%;
+	margin-left: 10%;
 }
 
 agm-marker {
 	height: 10px;
+}
+
+img {
+	overflow: auto;
+	height: 25px;
+	width: 25px;
 }
 
 #search-bar {
