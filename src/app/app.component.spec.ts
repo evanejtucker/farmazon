@@ -1,42 +1,34 @@
-import { TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
+
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  let comp: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ]
-    }).compileComponents();
-  }));
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
+      declarations: [ AppComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ]
+    });
+    fixture = TestBed.createComponent(AppComponent);
+    comp = fixture.componentInstance;
+  });
 
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
+  it('can load instance', () => {
+    expect(comp).toBeTruthy();
+  });
 
-  // it(`should have as title 'app'`, async(() => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app.title).toEqual('app');
-  // }));
+  it('title defaults to: Farmazon', () => {
+    expect(comp.title).toEqual('Farmazon');
+  });
 
-  // it('should render title in a h1 tag', async(() => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  // }));
+  // it('state defaults to: small', () => {
+  //   expect(comp.state).toEqual('small');
+  // });
+
+  // it('jokeBank defaults to: ['Why did the cabbage win the race?.....because it was ahead', 'What is a farmers favorite Bruce Springsteen song?...Born in the USDA ', 'Where do farmers send their kids?....Kinder-Garden', 'What do you call a Nebraskan farmer with a sheep under each arm?....A pimp', 'What's the best part of farming?....Getting down and dirty with my hoes', 'What do you get when you cross an elephant with a garden?.....Squash!', 'How did the chicken farmer get into the Guinness book of world records?...His record c--k']', () => {
+  //   expect(comp.jokeBank).toEqual(['Why did the cabbage win the race?.....because it was ahead', 'What is a farmers favorite Bruce Springsteen song?...Born in the USDA ', 'Where do farmers send their kids?....Kinder-Garden', 'What do you call a Nebraskan farmer with a sheep under each arm?....A pimp', 'What's the best part of farming?....Getting down and dirty with my hoes', 'What do you get when you cross an elephant with a garden?.....Squash!', 'How did the chicken farmer get into the Guinness book of world records?...His record c--k']);
+  // });
 });
