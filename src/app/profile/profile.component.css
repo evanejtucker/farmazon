@@ -1,0 +1,57 @@
+body {
+    background-image: url("../../assets/images/urbanfarm2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;    
+    color: white;
+    
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.header {
+  text-align: center;
+  grid-column: 1 / 4;
+  grid-row: 1 ;
+}
+
+.profilePic {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.location {	
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+.bio {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+}
+
+.vegetables {
+  grid-column: 1 / 2;
+  grid-row: 5 / 7;
+}
+
+.fruits {
+  grid-column: 2 / 3;
+  grid-row: 5 / 7;
+}
+
+.contact {
+  grid-column: 3 / 4;
+  grid-row: 5 / 7;
+}
+
+.reviews {
+  grid-column: 1 / 4;
+  grid-row: 7 / 8;
+}
