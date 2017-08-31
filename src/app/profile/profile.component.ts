@@ -9,8 +9,6 @@ import { UserService } from '../user.service';
 
 export class ProfileComponent implements OnInit {
 
-	
-
   constructor(private user: UserService) { }
 
   ngOnInit() {
