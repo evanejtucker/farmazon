@@ -1,0 +1,14 @@
+body {
+    background-image: url("../../assets/images/farmingbg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;    
+    color: white;
+    
+}
+
+.form-group {
+    background-color: black;
+    opacity: .5;
+}

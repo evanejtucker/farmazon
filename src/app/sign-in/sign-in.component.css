@@ -1,0 +1,19 @@
+body {
+    background-image: url("../../assets/images/farmingbg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;  
+    padding-bottom: 200px;
+    color: white;
+}
+
+div+.input {
+    margin-top: 15px;
+}
+
+.input {
+    width: 50%;
+    background-color: black;
+    opacity: .5;
+}
