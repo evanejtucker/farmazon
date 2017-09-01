@@ -20,16 +20,19 @@ export class SearchBarComponent implements OnInit {
   veggie:string
 
   vegtables:any = [];
+  
+  categories:any = ["vegtables", "fruits"];
 
-   clickSearch(event) {
+   clickSearch(event, category) {
      event.preventDefault();
-     alert(this.veggie);
-
+    //  alert(this.veggie);
+    console.log('button click',category);
+    this.server.getProducts('api/products/');
    }
 
    onChange(veggie) {
      this.veggie = veggie;
-     console.log(veggie);
+     console.log('on change',veggie);
    }
 
 }

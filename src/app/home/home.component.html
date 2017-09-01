@@ -1,14 +1,28 @@
+<body>
 <div class="container">
-	<h4> {{ today | date}} </h4>
-</div>
+	
+	<div class="col s6 offset-s3" id="search-bar">
+		<h4 id="date"> {{ today | date}} </h4>
+		<app-search-bar></app-search-bar>
+	</div>
 
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  <agm-marker [iconUrl]="'https://d30y9cdsu7xlg0.cloudfront.net/png/24545-200.png'" *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
-          </agm-marker>
+
+<agm-map class="map" [latitude]="lat" [longitude]="lng">
+
+  <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng"[label]="farmer">
+		  
+	<agm-info-window [disableAutoPan]="true">
+		*          Hi, this is where the <strong>Farmer's info will go</strong>
+			<img src="https://previews.123rf.com/images/chudtsankov/chudtsankov1004/chudtsankov100400495/6906540-Happy-Caucasian-Farmer-Man-Carrying-A-Rake-And-Pail-Stock-Vector.jpg" alt="farmer">
+		*        </agm-info-window>
+</agm-marker>
 
 
 </agm-map>
 
-<app-search-bar></app-search-bar>
+</div>
 
+
+<div class='agm-info-window-content'>      <ng-content></ng-content>
+</div>
+</body>

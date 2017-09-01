@@ -1,8 +1,36 @@
 agm-map {
-  height: 300px;
-  width: 75%;
+  	height: 500px;
+	width: 100%;
+	margin-left: 10%;
 }
 
 agm-marker {
 	height: 10px;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+img {
+	overflow: auto;
+	height: 25px;
+	width: 25px;
+}
+
+#search-bar {
+	text-align: center;
+	margin-bottom: 40px;
+	color: white;
+}
+
+#date {
+	padding-top: 30px;
+}
+
+body {
+	background-image: url("../../assets/images/sky.jpg");
+	background-size: 100% 100%;
+	font-family: 'Acme', sans-serif;
+	height: 1000px;
 }

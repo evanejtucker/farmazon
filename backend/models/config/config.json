@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "rootroot",
+    "database": "farmersonly",
+    "host": "ducodingbootcamp1project2.c8q4eqibbjyw.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "rootroot",
+    "database": "farmersonly",
+    "host": "ducodingbootcamp1project2.c8q4eqibbjyw.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "rootroot",
+    "database": "farmersonly",
+    "host": "ducodingbootcamp1project2.c8q4eqibbjyw.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
