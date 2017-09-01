@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "server.js",
   "scripts": {
+    "preinstall": "npm install -g @angular/cli",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
