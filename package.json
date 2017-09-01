@@ -2,11 +2,11 @@
   "name": "farm-test",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "preinstall": "npm install -g @angular/cli",
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
